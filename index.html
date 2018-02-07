@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bg">
+        <img src="img/bg.jpg" alt="">
+        <div class="money"><p>999</p></div>
+        <div class="time"><p>999</p></div>
+        <div class="bighongbao"></div>
+        <div class="redbao"></div>
+    </div>
+</body>
+<script src="js/rem.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    //touchmove  手指不放发生
+    $('body').on('touchmove',function(){
+        $('.redbao').css({'opacity':'1'})  //隐藏div
+    })
+    //touchend   手指放开发生
+    $('body').on('touchend',function(){
+        $('.redbao').css({'opacity':'0'})  //显示，固定div
+    })
+</script>
+</html>
